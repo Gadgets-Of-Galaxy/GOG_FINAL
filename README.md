@@ -15,7 +15,7 @@ To get started  you can simply clone this `GOG` repository and install the depen
 Clone the `GOG` repository using git:
 
 ```bash
-git clone 
+git clone https://github.com/Gadgets-Of-Galaxy/GOG_FINAL
 cd GOG
 ```
 
@@ -34,6 +34,9 @@ Used:
 nodejs
 mongodb
 with ejs formats
+
+
+Github link: https://github.com/Gadgets-Of-Galaxy/GOG_FINAL
 
 
 
