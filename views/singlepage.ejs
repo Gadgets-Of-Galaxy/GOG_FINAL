@@ -1,0 +1,285 @@
+<%- include('includes/head') %>
+
+    <body>
+        <header>
+            <%- include('includes/header_top'); %>
+                <%- include('includes/header_nav'); %>
+                    <!-- <%- include('includes/header_main'); %> -->
+        </header>
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="product-imgs">
+                    <div class="img-display">
+                        <div class="img-showcase">
+                            <img src="/<%= product.imagePath %>" alt="">
+                            <img src="/<%= product.imagethumbnail1 %>" alt="">
+                            <img src="/<%= product.imagethumbnail2 %>" alt="">
+                            <img src="/<%= product.imagethumbnail3 %>" alt="">
+                        </div>
+                    </div>
+                    <div class="img-select">
+                        <div class="img-item">
+                            <a href="#" product-id="1">
+                                <img src="/<%= product.imagePath %>" alt="">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" product-id="2">
+                                <img src="/<%= product.imagethumbnail1 %>" alt="">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" product-id="3">
+                                <img src="/<%= product.imagethumbnail2 %>" alt="">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="#" product-id="4">
+                                <img src="/<%= product.imagethumbnail3 %>" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- card right -->
+                <div class="product-content">
+                    <h3 class="product-title">
+                        <%= product.title %>
+                    </h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>
+                            <!-- <%= product.rating %> -->
+                            (<%= product.reviewed %>)
+                        </span>
+                    </div>
+
+                    <div class="product-price">
+                        <p class="last-price">Old Price: <span>INR.<%= product.mrp%></span></p>
+                        <p class="new-price">New Price: <span>INR.<%= product.price %></span></p>
+                    </div>
+
+                    <div class="product-detail">
+                        <h2>About this item: </h2>
+                        <p>
+                            <%= product.description %>
+                        </p>
+                        <ul>
+                            Features: <br><li><%= product.features1 %></li>
+                                                        <li><%= product.features2 %></li>
+                                                        <li><%= product.features3 %></li>
+                                                        <li><%= product.features4 %></li>
+                        </ul>
+                    </div>
+
+                    <div class="purchase-info">
+                        <input type="number" min="0" value="1">
+                        <a href="/add-to-cart/<%= product._id %>">
+                            <button type="button" class="btn">
+                                Add to Cart <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </a>
+                        <a href="/add-to-wishlist/<%= product._id %>">
+                            <button type="button" class="btn">
+                                Favourite <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </a>
+                        <!-- <button type="button" class="btn">Compare</button> -->
+                    </div>
+                    <div class="social-links">
+                        <p>Share At: </p>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related products copied from featured from home page -->
+        <div class="related-products">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="column">
+                        <div class="sectop flexitem">
+                            <h2><span class="circle"></span><span>Related Products</span></h2>
+                            <div class="second-links">
+                                <a href="/relatedProducts/<%= product.brand %>" class="view-all">View all
+                                    <i class="far fa-arrow-alt-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="products main flexwrap">
+                            
+                            <% for(let i=0; i<products.length; i++){ %>
+                            <div class="item">
+                                <div class="media">
+                                    <div class="thumbnail object-cover">
+                                        <a href="#">
+                                            <img src="/<%= products[i].imagePath %>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="hoverable">
+                                        <ul>
+                                            <li class="active"><a href="#"><i class="fa-regular fa-heart"></i></a>
+                                            </li>
+                                            <li><a href="/products/<%=products[i].category%>/<%=products[i]._id%>"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-random" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="offer flexitem">
+                                        <p class="mini-text">Offer ends at</p>
+                                        <ul class="flexcenter">
+                                            <li>1</li>
+                                            <li>15</li>
+                                            <li>28</li>
+                                            <li>02</li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="main-links"><a href="/products/<%=products[i].category%>/<%=products[i]._id%>"><%= products[i].title %></a></h3>
+                                    <div class="rating">
+                                        <div class="stars"></div>
+                                        <span class="mini-text">(<%= products[i].reviewed %>)</span>
+                                    </div>
+                                    <div class="price">
+                                        <span class="current">INR.<%= products[i].price %></span>
+                                        <span class="normal mini-text">INR.<%= products[i].mrp %></span>
+                                    </div>
+                                    <div class="stock mini-text" product-stock="4000">
+                                        <div class="qty">
+                                            <span>Sold: <strong class="qty-sold"><%= products[i].sold %></strong></span>
+                                            <span>Stock: <strong class="qty-available"><%= products[i].stock %></strong></span>
+                                        </div>
+                                        <div class="bar">
+                                            <div class="available"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%} %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="banners">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="column">
+                        <!-- product category -->
+                        <div class="product-categories flexwrap">
+                            <div class="row">
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="/images/c5.png" alt="">
+                                    </div>
+                                    <div class="content mini-links">
+                                        <h4><a href="#">Gadgets</a></h4>
+                                        <ul class="flexcol">
+                                            <li><a href="#">Cameras</a></li>
+                                            <li><a href="#">Cell Phones</a></li>
+                                            <li><a href="#">Headphones</a></li>
+                                            <li><a href="#">Home Audio</a></li>
+                                            <li><a href="#">Video Game Consoles</a></li>
+                                            <li><a href="#">Wearable Technology</a></li>
+                                        </ul>
+                                        <div class="second-links">
+                                            <a href="#" class="view-all">View all
+                                                <i class="far fa-arrow-alt-circle-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="/images/c4.png" alt="">
+                                    </div>
+                                    <div class="content mini-links">
+                                        <h4><a href="#">Home appliances</a></h4>
+                                        <ul class="flexcol">
+                                            <li><a href="#">Cameras</a></li>
+                                            <li><a href="#">Cell Phones</a></li>
+                                            <li><a href="#">Headphones</a></li>
+                                            <li><a href="#">Home Audio</a></li>
+                                            <li><a href="#">Wearable Technology</a></li>
+                                        </ul>
+                                        <div class="second-links">
+                                            <a href="#" class="view-all">View all
+                                                <i class="far fa-arrow-alt-circle-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="item">
+                                    <div class="image">
+                                        <img src="/images/c4.png" alt="">
+                                    </div>
+                                    <div class="content mini-links">
+                                        <h4><a href="#">Gaming Console</a></h4>
+                                        <ul class="flexcol">
+                                            <li><a href="#">Microphone</a></li>
+                                            <li><a href="#">Headphones</a></li>
+                                            <li><a href="#">Playstation</a></li>
+                                            <li><a href="#">Mouse</a></li>
+                                            <li><a href="#">Wearable Technology</a></li>
+                                        </ul>
+                                        <div class="second-links">
+                                            <a href="#" class="view-all">View all
+                                                <i class="far fa-arrow-alt-circle-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product category -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <%- include('includes/footer',categories) %>
+        <script>
+            // image selector
+            const imgs = document.querySelectorAll('.img-select a');
+            const imgBtns = [...imgs];
+            let imgId = 1;
+
+            imgBtns.forEach((imgItem) => {
+                imgItem.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    imgId = imgItem.productset.id;
+                    slideImage();
+                });
+            });
+
+            function slideImage() {
+                const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+                document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+            }
+            window.addEventListener('resize', slideImage);
+        </script>
+    </body>

@@ -1,0 +1,91 @@
+<%- include('includes/head'); %>
+
+    <body>
+        <div id="page" class="site page-single">
+            <header>
+                <%- include('includes/header_top'); %>
+                    <%- include('includes/header_nav'); %>
+                        <%- include('includes/header_main'); %>
+            </header>
+            <main>
+                <div id="featuredproducts" class="features">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="column">
+                                <div class="sectop flexitem">
+                                    <h2><span class="circle"></span><span>
+                                            <%= title %>
+                                        </span></h2>
+                                </div>
+                                <div class="products main flexwrap">
+                                    <% for(let i=0; i<products.length; i++){ %>
+                                        <div class="item">
+                                            <div class="media">
+                                                <div class="image object-cover">
+                                                    <a href="#">
+                                                        <img src="<%= products[i].imagePath %>" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="hoverable">
+                                                    <ul>
+                                                        <li class="active"><a href="/add-to-wishlist/<%= products[i]._id %>"><i
+                                                                    class="fa-regular fa-heart"></i></a></li>
+                                                        <li><a href="/products/<%=products[i].category %>/<%=products[i]._id%>"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa fa-random"
+                                                                    aria-hidden="true"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- <div class="discount circle flexcenter"><span>32%</span></div> -->
+                                            </div>
+                                            <div class="content">
+                                                <h3 class="main-links"><a href="/products/<%=products[i].category %>/<%=products[i]._id%>">
+                                                        <%= products[i].title %>
+                                                    </a>
+                                                </h3>
+                                                <div class="rating">
+                                                    <div class="stars"></div>
+                                                    <span class="mini-text">
+                                                        <%= products[i].reviewed %>
+                                                    </span>
+                                                </div>
+                                                <div class="price">
+                                                    <span class="current">INR.<%= products[i].price %></span>
+                                                    <span class="normal mini-text">INR.<%= products[i].mrp %></span>
+                                                </div>
+                                                <div class="footer">
+                                                    <ul class="mini-text">
+                                                        <li>
+                                                            <%= products[i].features1 %>
+                                                        </li>
+                                                        <li>
+                                                            <%= products[i].features2 %>
+                                                        </li>
+                                                        <li>
+                                                            <%= products[i].features3 %>
+                                                        </li>
+                                                        <li>
+                                                            <%= products[i].features4 %>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% }; %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- <script src="javascript/script.js"></script> -->
+        <script>
+            const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
+                dptClass = document.querySelector('.site');
+            dptButton.addEventListener('click', function () {
+                dptClass.classList.toggle('showdpt')
+            })
+        </script>
+    </body>

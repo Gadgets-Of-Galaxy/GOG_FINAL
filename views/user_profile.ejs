@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/profile.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= title %></title>
+</head>
+
+<body>
+	<a href="/">
+		<div class="sidebar">
+			<div class="logo-details">
+                <i class='bx bxs-home-smile'></i>
+				<span class="logo_name">GOG</span>
+			</div>
+	</a>
+		<ul class="nav-links">
+			<li>
+				<a href="/myAccount" class="active">
+					<i class='bx bx-user-circle'></i>
+					<span class="links_name">My Profile</span>
+				</a>
+			</li>
+			<li>
+				<a href="/editProfile">
+					<i class='bx bx-box'></i>
+					<span class="links_name">Edit Profile</span>
+				</a>
+			</li>
+			<li>
+				<a href="/myOrders">
+					<i class='bx bx-list-ul'></i>
+					<span class="links_name">My Orders</span>
+				</a>
+			</li>
+			<li>
+				<a href="/myAccount">
+					<i class='bx bx-book-alt'></i>
+					<span class="links_name">Favourites</span>
+				</a>
+			</li>
+			<li class="log_out">
+				<a href="/logout">
+					<i class='bx bx-log-out'></i>
+					<span class="links_name">Log out</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<section class="home-section">
+		<nav>
+			<div class="sidebar-button">
+				<i class='bx bx-menu sidebarBtn'></i>
+				<span class="dashboard">My Profile</span>
+			</div>
+			<div class="search-box">
+				<input type="text" placeholder="Search...">
+				<i class='bx bx-search'></i>
+			</div>
+		</nav>
+
+		<div class="home-content uprofilepage">
+			<h3 class="font-weight-bold"><i class='bx bxs-user' ></i>  MY PROFILE</h3>
+			<hr>
+			<div id="profile-info">
+			</div>
+			<div class="flex-item ">
+				<p class='key'>Full Name</p>
+				<p class='value'><%= user[0].name %></p>
+			</div>
+			<br>
+			<div class="flex-item ">
+				<p class='key'>Email ID</p>
+				<p class='value'><%= user[0].email %></p>
+			</div>
+			<br>
+			<div class="flex-item ">
+				<p class='key'>Mobile</p>
+				<p class='value'><%= user[0].mobileNumber %></p>
+			</div>
+			<br>
+			<div class="flex-item ">
+				<p class='key'>Gender</p>
+				<p class='value'><%= user[0].gender %></p>
+			</div>
+			<br>
+			<div class="flex-item ">
+				<p class='key'>Date of Birth</p>
+				<p class='value'><%= user[0].dob %></p>
+			</div>
+			<br>
+			<div class="flex-item ">
+				<p class='key'>Location</p>
+				<p class='value'><%= user[0].location %></p>
+			</div>
+            <a href="/editProfile">
+				<button type="button" id="edit-profile-btn"
+            class="edit-button btn" aria-label='edit button'>EDIT</button>
+			</a>
+		</div>
+	</section>
+
+	<script>
+		let sidebar = document.querySelector(".sidebar");
+		let sidebarBtn = document.querySelector(".sidebarBtn");
+		sidebarBtn.onclick = function () {
+			sidebar.classList.toggle("active");
+			if (sidebar.classList.contains("active")) {
+				sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+			} else
+				sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+		}
+	</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

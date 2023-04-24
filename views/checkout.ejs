@@ -1,0 +1,94 @@
+<%- include('includes/head') %>
+<body>
+  <div id="page" class="site page-category">
+    <aside class="site-off desktop-hide">
+      <div class="off-canvas">
+          <div class="canvas-head">
+              <div class="logo">
+                  <a href="/"><span class="circle"></span>GOG</a>
+              </div>
+              <a href="#" class="t-close flexcenter"><i class="fa fa-times" aria-hidden="true"></i></a>
+          </div>
+          <div class="departments"></div>
+          <nav></nav>
+          <div class="thetop-nav"></div>
+      </div>
+  </aside>
+  <header>
+      <%- include('includes/header_top'); %>
+          <%- include('includes/header_nav'); %>
+              <%- include('includes/header_main'); %>
+  </header>
+    <main>
+      <div class="single-cart">
+        <div class="container">
+          <div class="wrapper">
+            <div class="checkout flexwrap">
+              <div class="item right">
+                <h2>Order Summary</h2>
+                <div class="summary-order is_sticky">
+                  <div class="summary-totals">
+                    <ul>
+                      <li>
+                        <span>Subtotal</span>
+                        <span>INR. <%= cost %></span>
+                      </li>
+                      <!-- <li>
+                        <span>Discount</span>
+                        <span>INR. 100.00</span>
+                      </li> -->
+                      <li>
+                        <span>Shipping charges: </span>
+                        <span>INR. <%= cost*0.2 %></span>
+                      </li>
+                      <li>
+                        <span>Total</span>
+                        <span>INR. <%= cost*1.2 %></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item left styled">
+                <h1>Shipping address</h1>
+                <form action="">
+                  <p>
+                    <label for="email">Email address <span></span></label>
+                    <input type="email" name="email" id="email" autocomplete="off " required>
+                  </p>
+                  <p><label for="fname">First Name <span></span></label>
+                    <input type="text" id="fname" required>
+                  </p>
+                  <p><label for="address">Street address <span></span></label>
+                    <input type="text" id="address" required>
+                  </p>
+                  <p><label for="city">City <span></span></label>
+                    <input type="text" id="city" required>
+                  </p>
+                  <p><label for="state">State/provenience <span></span></label>
+                    <input type="text" id="state" required>
+                  </p>
+                  <p><label for="postal">Zip/Postal Code <span></span></label>
+                    <input type="number" id="state" required>
+                  </p>
+                  <p><label for="phone">Phone Number <span></span></label>
+                    <input type="number" id="phone" required>
+                  </p>
+                </form>
+                <div class="shipping-methods">
+                  <h2>Shipping methods</h2>
+                  <p class="checkset"><input type="radio" checked>
+                    <label><strong>Postal: 2% charges</strong></label>
+                  </p>
+                </div>
+                <div class="primary-checkout">
+                  <a href="/placeOrder"><button class="primary-button">Place Order</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+</body>
+</html>

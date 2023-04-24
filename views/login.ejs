@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GOG | <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="user signinBx">
+                <div class="formBx">
+                    <form name="validatelogin" method="POST" action="/login" onsubmit="return formvalidate()">
+                        <h2>Sign In</h2>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <br>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <br>
+                        <input type="submit" value="Submit" class="button">
+                        <p class="signup">
+                            Don't have an account ?
+                            <a href="#" onclick="toggleForm();">Sign Up.</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form name="validate" method="POST" action="/register" onsubmit="return validateform();">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Username">
+                        <br>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <br>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <br>
+                        <label for="cpassword">Confirm password</label>
+                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password">
+                        <br>
+                        <input type="submit" value="Submit" class="button">
+                        <p class="signup">
+                            Already have an account?
+                            <a href="#" onclick="toggleForm();">Login.</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="imgBx"><img
+                    src="https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg"
+                    alt=""></div>
+        </div>
+        </div>
+    </section>
+    <!-- <script src="js/form.js"></script> -->
+    <script>
+        const toggleForm = () => {
+            const container = document.querySelector('.container');
+            container.classList.toggle('active');
+        };
+
+        function formvalidate() {
+            var name = document.forms["formvalidate"]["name"].value;
+            var email = document.forms["formvalidate"]["email"].value;
+            var password = document.forms["formvalidate"]["password"].value;
+            var cpassword = document.forms["formvalidate"]["cpassword"].value;
+            if (name == "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+            if (name.length < 5) {
+                alert("Name should contain atleast 5 characters");
+                return false;
+            }
+            if (email == "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+            var eCheck = /^\S+@\S+\.\S+$/;
+            if (!email.match(eCheck)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            if (password == "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+            var pCheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{5,15}$/;
+            if (!password.match(pCheck)) {
+                alert("password should contain atleast 5 characters and atmost 15 characters, Must contain at least one digit, Must contain at least one lowercase letter, Must contain at least one uppercase letter.");
+                return false;
+            }
+        }
+
+        function validateform() {
+            var name = document.forms["validate"]["name"].value;
+            var email = document.forms["validate"]["email"].value;
+            var password = document.forms["validate"]["password"].value;
+            var cpassword = document.forms["validate"]["cpassword"].value;
+            if (name == "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+            if (name.length < 2) {
+                alert("Name should contain atleast 3 characters");
+                return false;
+            }
+            if (email == "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+            var eCheck = /^\S+@\S+\.[a-z]+$/;
+            if (!email.match(eCheck)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            if (password == "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+            var pCheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{5,15}$/;
+            if (!password.match(pCheck)) {
+                alert("password should contain atleast 5 characters and atmost 15 characters, Must contain at least one digit, Must contain at least one lowercase letter, Must contain at least one uppercase letter.");
+                return false;
+            }
+            if (password != cpassword) {
+                alert("Confirm passwords do not match")
+                return false;
+            }
+            alert("SignUp completed successfully")
+        }
+    </script>
+</body>
+
+</html>

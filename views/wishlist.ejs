@@ -1,0 +1,101 @@
+<%- include('includes/head') %>
+    <header>
+        <%- include('includes/header_top'); %>
+            <%- include('includes/header_nav'); %>
+    </header>
+
+    <body>
+        <div id="page" class="site page-category">
+            <div id="page" class="site">
+                <aside class="site-off desktop-hide">
+                    <div class="off-canvas">
+                        <div class="canvas-head">
+                            <div class="logo">
+                                <a href="/"><span class="circle"></span>GOG</a>
+                            </div>
+                            <a href="#" class="t-close flexcenter"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="departments"></div>
+                        <nav></nav>
+                        <div class="thetop-nav"></div>
+                    </div>
+                </aside>
+                <header>
+
+                </header>
+                <main>
+
+                    <div class="single-cart">
+                        <div class="container">
+                            <div class="wrapper">
+                                <div class="page-title">
+                                    <h1>WishList</h1>
+                                </div>
+                                <div class="products one cart" id="#totalss">
+                                    <div class="flexwrap">
+                                        <form action="" class="form-cart">
+                                            <div class="item">
+                                                <table id="cart-table">
+                                                    <% if(!wishlistitems){ %>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No wishlist items</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <% }else{ %>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Item</th>
+                                                                    <th>Price</th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <% for(let i=0; i<wishlistitems.length; i++){ %>
+                                                                    <tr>
+                                                                        <td class="flexitem">
+                                                                            <div class="thumbnail object-cover">
+                                                                                <a href="#">
+                                                                                    <img src="/<%= wishlistitems[i].imagePath %>"
+                                                                                        alt="">
+                                                                                </a>
+                                                                            </div>
+                                                                            <div class="content"><strong><a href="#">
+                                                                                        <%= wishlistitems[i].title%>
+                                                                                    </a></strong>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <%= wishlistitems[i].price %>
+                                                                        </td>
+                                                                        <td><a href="/add-to-cart/<%= wishlistitems[i].productId %>"
+                                                                                class="item-remove">
+                                                                                <input type="button"
+                                                                                    value="AddtoCart"></a></td>
+                                                                        <td><a href="/reduce/<%= wishlistitems[i]._id%>"
+                                                                                class="item-remove">
+                                                                                <input type="button" value="Remove"></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% } %>
+                                                            </tbody>
+                                                            <% } %>
+                                                </table>
+
+                                            </div>
+                                        </form><br><br>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </main><br><br><br>
+                <%- include('includes/footer', categories) %>
+            </div>
+    </body>
+
+    </html>

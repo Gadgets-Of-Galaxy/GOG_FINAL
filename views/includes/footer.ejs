@@ -1,0 +1,42 @@
+<footer class="footer">
+    <section id="contact" class="mt-5">
+        <div class="footercontainer">
+            <div class="footerrow">
+                <div class="footercol">
+                    <h4>About Us</h4>
+                    <ul>
+                        <!-- <li><a href="/aboutUs">About Our Store</a></li> -->
+                        <li><a href="/contactUs">Contact Us</a></li>
+                        <li><a href="/">Work with us</a></li>
+                    </ul>
+                </div>
+                <div class="footercol">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order status</a></li>
+                        <li><a href="#">Payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footercol">
+                    <h4>Shop</h4>
+                    <ul>
+                        <% for(let i=0; i<categories.length; i++){ %>
+                        <li><a href="/products/<%= categories[i].slug %>"><%= categories[i].title %></a></li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="footercol">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
