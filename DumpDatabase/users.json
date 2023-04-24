@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "64469fc5ed3d7f6fcc771c7c"
+  },
+  "isActive": false,
+  "isDeleted": false,
+  "name": "THANUSH SETTY",
+  "email": "thanushsetty293@gmail.com",
+  "password": "$2a$10$9kNPkaxZXZyEP80tWl7nTerqB7ugzDh9t8EJyJt96L5QE5c9Bv6Qa",
+  "createdAt": {
+    "$date": "2023-04-24T15:27:02.766Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-24T16:20:05.372Z"
+  },
+  "__v": 0,
+  "dob": "02/09/2003",
+  "gender": "MALE",
+  "location": "Sricity",
+  "mobileNumber": {
+    "$numberLong": "7780419339"
+  }
+},{
+  "_id": {
+    "$oid": "6446a06c89aaec41f46c301a"
+  },
+  "isActive": false,
+  "isDeleted": false,
+  "name": "Hemanth",
+  "email": "hemanth1@gmail.com",
+  "password": "$2a$10$NSW1fmjVFmYOfRbrr9TbEueim4b8OGTAXZQQMQSpo5mr9vMjNAWnS",
+  "createdAt": {
+    "$date": "2023-04-24T15:29:48.711Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-24T15:29:48.711Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6446c130f78cea1b4c2312bd"
+  },
+  "isActive": false,
+  "isDeleted": false,
+  "name": "hemanth",
+  "email": "hemanthadigopula0921@gmail.com",
+  "password": "$2a$10$gESWnDdbfGtYBSdYW1HCj.OTRfP1WSpulXelAWSZjl7BKS.r2/d5m",
+  "createdAt": {
+    "$date": "2023-04-24T17:49:37.169Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-24T17:49:37.169Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,295 @@
+[{
+  "_id": {
+    "$oid": "64451351e535ee47b4c38982"
+  },
+  "totalQty": 2,
+  "items": [
+    {
+      "price": 137990,
+      "_id": {
+        "$oid": "64451351e535ee47b4c38984"
+      },
+      "productId": {
+        "$oid": "6442336d45318afadbd6b66c"
+      },
+      "title": "Apple iPhone 14 Pro Max (256GB, Deep Purple)",
+      "imagePath": "images/mobiles/apple/ma10.webp",
+      "productCode": "ma10"
+    },
+    {
+      "price": 18000,
+      "_id": {
+        "$oid": "6445195f75b7c03a80a3b33d"
+      },
+      "productId": {
+        "$oid": "64440e83c2c4ccd69b5154df"
+      },
+      "title": "Apple Airpods (3rd Generation)with Lightning Charging Case",
+      "imagePath": "images/earphones/apple/asa10.webp",
+      "productCode": "asa10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-23T11:15:29.123Z"
+  },
+  "user": {
+    "$oid": "644426b2edd7046ff8773c24"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "64451c0f019b782de823678d"
+  },
+  "totalQty": 1,
+  "items": [
+    {
+      "price": 137990,
+      "_id": {
+        "$oid": "64451c0f019b782de823678f"
+      },
+      "productId": {
+        "$oid": "6442336d45318afadbd6b66c"
+      },
+      "title": "Apple iPhone 14 Pro Max (256GB, Deep Purple)",
+      "imagePath": "images/mobiles/apple/ma10.webp",
+      "productCode": "ma10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-23T11:52:47.467Z"
+  },
+  "user": {
+    "$oid": "64451b98019b782de8236734"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64451e9cdeb5fc406857a691"
+  },
+  "totalQty": 1,
+  "items": [
+    {
+      "price": 137990,
+      "_id": {
+        "$oid": "64451e9cdeb5fc406857a693"
+      },
+      "productId": {
+        "$oid": "6442336d45318afadbd6b66c"
+      },
+      "title": "Apple iPhone 14 Pro Max (256GB, Deep Purple)",
+      "imagePath": "images/mobiles/apple/ma10.webp",
+      "productCode": "ma10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-23T12:03:40.163Z"
+  },
+  "user": {
+    "$oid": "6445154a8956254f5c3c2f5d"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "644547ef1ec3101bec2e311b"
+  },
+  "totalQty": 1,
+  "items": [
+    {
+      "price": 137990,
+      "_id": {
+        "$oid": "644547ef1ec3101bec2e311d"
+      },
+      "productId": {
+        "$oid": "6442336d45318afadbd6b66c"
+      },
+      "title": "Apple iPhone 14 Pro Max (256GB, Deep Purple)",
+      "imagePath": "images/mobiles/apple/ma10.webp",
+      "productCode": "ma10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-23T14:59:59.364Z"
+  },
+  "user": {
+    "$oid": "644547e01ec3101bec2e30ec"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64469003c41b8f2bd8744a5b"
+  },
+  "totalQty": 2,
+  "items": [
+    {
+      "price": 137990,
+      "_id": {
+        "$oid": "64469003c41b8f2bd8744a5d"
+      },
+      "productId": {
+        "$oid": "6442336d45318afadbd6b66c"
+      },
+      "title": "Apple iPhone 14 Pro Max (256GB, Deep Purple)",
+      "imagePath": "images/mobiles/apple/ma10.webp",
+      "productCode": "ma10"
+    },
+    {
+      "price": 1899,
+      "_id": {
+        "$oid": "6446900fc41b8f2bd8744a83"
+      },
+      "productId": {
+        "$oid": "6443e3c848a595817735a79f"
+      },
+      "title": "boAt Rockerz 558 Bluetooth Headset with Mic",
+      "imagePath": "images/earphones/boat/asb20.webp",
+      "productCode": "asb20"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-24T14:19:47.175Z"
+  },
+  "user": {
+    "$oid": "64468d728ca9ba5c2c8d0929"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6446a00ced3d7f6fcc771cbb"
+  },
+  "totalQty": 3,
+  "items": [
+    {
+      "price": 1899,
+      "_id": {
+        "$oid": "6446a00ced3d7f6fcc771cbd"
+      },
+      "productId": {
+        "$oid": "6443e3c848a595817735a79f"
+      },
+      "title": "boAt Rockerz 558 Bluetooth Headset with Mic",
+      "imagePath": "images/earphones/boat/asb20.webp",
+      "productCode": "asb20"
+    },
+    {
+      "price": 18000,
+      "_id": {
+        "$oid": "6446b14da5acaa5bb8142142"
+      },
+      "productId": {
+        "$oid": "64440e83c2c4ccd69b5154df"
+      },
+      "title": "Apple Airpods (3rd Generation)with Lightning Charging Case",
+      "imagePath": "images/earphones/apple/asa10.webp",
+      "productCode": "asa10"
+    },
+    {
+      "price": 213894,
+      "_id": {
+        "$oid": "6446bb43056b7861007a7fb0"
+      },
+      "productId": {
+        "$oid": "6444cb1e456627138f0e3c7c"
+      },
+      "title": "Apple MacBook Pro 14 2021'",
+      "imagePath": "images/Laptops/Apple/la20.avif",
+      "productCode": "la20"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-24T15:28:12.265Z"
+  },
+  "user": {
+    "$oid": "64469fc5ed3d7f6fcc771c7c"
+  },
+  "__v": 2
+},{
+  "_id": {
+    "$oid": "6446ba01056b7861007a7e83"
+  },
+  "totalQty": 2,
+  "items": [
+    {
+      "price": 137990,
+      "_id": {
+        "$oid": "6446ba01056b7861007a7e85"
+      },
+      "productId": {
+        "$oid": "6442336d45318afadbd6b66c"
+      },
+      "title": "Apple iPhone 14 Pro Max (256GB, Deep Purple)",
+      "imagePath": "images/mobiles/apple/ma10.webp",
+      "productCode": "ma10"
+    },
+    {
+      "price": 1899,
+      "_id": {
+        "$oid": "6446ba2b056b7861007a7edf"
+      },
+      "productId": {
+        "$oid": "6443e3c848a595817735a79f"
+      },
+      "title": "boAt Rockerz 558 Bluetooth Headset with Mic",
+      "imagePath": "images/earphones/boat/asb20.webp",
+      "productCode": "asb20"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-24T17:18:57.270Z"
+  },
+  "user": {
+    "$oid": "6446b9f1056b7861007a7e69"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6446bcab2d17ad6b3c0f7a85"
+  },
+  "totalQty": 1,
+  "items": [
+    {
+      "price": 1899,
+      "_id": {
+        "$oid": "6446bcab2d17ad6b3c0f7a87"
+      },
+      "productId": {
+        "$oid": "6443e3c848a595817735a79f"
+      },
+      "title": "boAt Rockerz 558 Bluetooth Headset with Mic",
+      "imagePath": "images/earphones/boat/asb20.webp",
+      "productCode": "asb20"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-24T17:30:19.737Z"
+  },
+  "user": {
+    "$oid": "6446bc0b2d17ad6b3c0f7a3d"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6446c144f78cea1b4c2312dc"
+  },
+  "totalQty": 1,
+  "items": [
+    {
+      "price": 1299,
+      "_id": {
+        "$oid": "6446c145f78cea1b4c2312de"
+      },
+      "productId": {
+        "$oid": "64441126c2c4ccd69b5154e0"
+      },
+      "title": "boAt Airdopes 113 Wireless Gaming Earbuds",
+      "imagePath": "images/earphones/boat/asb10.webp",
+      "productCode": "asb10"
+    }
+  ],
+  "createdAt": {
+    "$date": "2023-04-24T17:49:56.981Z"
+  },
+  "user": {
+    "$oid": "6446c130f78cea1b4c2312bd"
+  },
+  "__v": 0
+}]
